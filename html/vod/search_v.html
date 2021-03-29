@@ -1,0 +1,41 @@
+{include file="public/include"}
+<body style="margin-top: 50px">
+	{include file="public/header"}
+	</header>
+    <div class="container">
+        <div class="row">
+        	<div class="col-lg-wide-75 col-xs-1 padding-0">	
+			   	<div class="stui-pannel stui-pannel-bg clearfix">
+					<div class="stui-pannel-box">
+						<div class="stui-pannel_bd clearfix">
+							<ul class="stui-vodlist__media col-pd clearfix">
+							    <!--<img src='' style="width: 70%;">-->
+							    <!--<p>真人识别，请输入验证码后继续查看！</p>-->
+							    <!--<span class="msg">真人验证，请输入验证码后查看！</span>-->
+							    <!-- 列表 -->
+								<li>
+							    
+				    <form name="searchv" method="get" action="{:mac_url('vod/search')}" onSubmit="return qrsearch();">
+    					<input type="hidden" name="wd" class="mac_wd form-control" value="{$param.wd}" placeholder="请输入关键词..."/>
+    					
+    				    <div style="clear: both;padding: 10px;"><img class="pull-left" id="verify_img" src="{:url('verify/index')}" onClick="this.src=this.src+'?'"  alt="单击刷新" /></div>
+    				    
+						<div style="clear: both;padding: 10px;"><input type="text" class="form-control" name="verify" placeholder="请输入验证码" style="width: 120px;min-height: 40px;"></div>	
+						<div style="clear: both;padding: 10px;"><button type="submit" class="button btn-primary" style="width: 120px;min-height: 40px;">继续搜索</button></div>	
+					</form>
+					
+								
+							     				
+					        	</li>
+								<!-- end 列表 -->
+							</ul>					
+						</div>
+					</div>				
+				</div>	            
+			</div>
+			
+        </div>
+    </div>
+	{include file="public/footer"}
+</body>
+</html>
